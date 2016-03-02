@@ -45,11 +45,13 @@ We hope the HTML standard will add a tag for this area.
 Some coders call it "master container", or "body content",
 or similar names. You can rename "leader" if you prefer.
 
-Usage:
+HTML example:
 
-    <header class="HolyGrail-header">...</header>
-    <div class="HolyGrail-leader">...</div>
-    <footer class="HolyGrail-footer">...</footer>
+    <body class="HolyGrail">
+      <header class="HolyGrail-header">...</header>
+      <div class="HolyGrail-leader">...</div>
+      <footer class="HolyGrail-footer">...</footer>
+    </body>
 
 
 ## Main Area ##
@@ -60,11 +62,13 @@ The layout has three major areas:
  * The main area. This is the middle center area on any size scren, and it grows to fit.
  * The last area. This is the right column on a big screen, or the bottom row on a small screen.
 
-Usage:
+HTML example:
 
-    <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
-    <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
-    <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
+    <div class="HolyGrail-leader">
+      <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
+      <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
+      <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
+    </div>
 
 We recommend using the HTML tag `main` for the main area.
 We suggest using the HTML tag `aside` for the other two areas,

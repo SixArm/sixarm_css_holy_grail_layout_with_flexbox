@@ -26,7 +26,7 @@
 /**
  * Component
  *
- * Usage: <body class="HolyGrail">
+ * HTML example: <body class="HolyGrail">
  */
 
 .HolyGrail {
@@ -47,11 +47,13 @@
  * Some coders call it "master container", or "body content",
  * or similar names. You can rename "leader" if you prefer.
  *
- * Usage:
+ * HTML example:
  *
- *     <header class="HolyGrail-header">...</header>
- *     <div class="HolyGrail-leader">...</div>
- *     <footer class="HolyGrail-footer">...</footer>
+ *     <body class="HolyGrail">
+ *       <header class="HolyGrail-header">...</header>
+ *       <div class="HolyGrail-leader">...</div>
+ *       <footer class="HolyGrail-footer">...</footer>
+ *     </body>
  */
 
 .HolyGrail-header {
@@ -81,29 +83,20 @@
  *   * The main area. This is the middle center area on any size scren, and it grows to fit.
  *   * The last area. This is the right column on a big screen, or the bottom row on a small screen.
  *
- * Usage:
+ * HTML example:
  *
- *     <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
- *     <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
- *     <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
+ *     <div class="HolyGrail-leader">...</div>
+ *       <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
+ *       <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
+ *       <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
+ *     </div>
  *
  * We recommend using the HTML tag `main` for the main area.
- *
  * We suggest using the HTML tag `aside` for the other two areas,
  * unless you have a better tag, such as `nav` for a navigation area.
  *
  * If you're building a page that you want to be indexed by search engines,
  * then we suggest you write the `main` area first because it may improve SEO.
- *
- * Usage:
- *
- *     <main class="HolyGrail-leader-main">Show in the middle</main>
- *     <aside class="HolyGrail-leader-first">Show at top or left</aside>
- *     <aside class="HolyGrail-leader-last">Show at bottom or right</aside>
- *
- * We use the naming convention of "first" and "last", rather than
- * anything like "row", "column", "left", "right", "top", "bottom", etc.
- * because we prefer semantic names suitable for various screen layouts.
  */
 
 .HolyGrail-leader-first {
