@@ -31,8 +31,11 @@
 
 .HolyGrail {
   display: flex;
-  height: 100%;
   flex-direction: column;
+  /* Set the height to 100% to avoid the IE 10-11 `min-height` bug.
+   * Use `%` instead of `vh` because `vh` is buggy in older mobile Safari.
+   */
+  height: 100%;
 }
 
 /**
@@ -62,9 +65,12 @@
 
 .HolyGrail-leader {
   display: flex;
-  flex: 1 0 auto; /* 2 */
+  /* Set `flex-shrink` to `0` to prevent some browsers from
+   * letting items shrink to smaller than their content's default
+   * minimum size. See http://bit.ly/1Mn35US for details.
+   */
+  flex: 1 0 auto;
   flex-direction: column;
-  padding: var(--space);
 }
 
 .HolyGrail-footer {
