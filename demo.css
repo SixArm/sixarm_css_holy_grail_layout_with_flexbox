@@ -1,0 +1,172 @@
+/**
+ * Page layout using the "holy grail" layout.
+ *
+ * This code comes from the "Solved By Flexbox" repository:
+ * https://github.com/philipwalton/solved-by-flexbox/blob/master/demos/holy-grail.md
+ *
+ * This code uses the naming conventions of SuitCSS:
+ *
+ *     .ComponentName
+ *     .ComponentName-partName
+ *     .ComponentName--modifierName
+ *     .ComponentName.is-stateOfComponent
+ *
+ * We have edited this code with the goal of making it easier for beginners:
+ *
+ *   * Added comments and examples
+ *   * Added blank classes to make it easier to see how to customize this.
+ *   * Omitted inessential items, such as margin, padding, color, border, etc.
+ *   * Renamed classes to make them more generic and also more semantic.
+ *
+ * If you know CSS well, and you want to optimize this file for speed,
+ * then you may want to elide the blank classes, combine equal classes,
+ * delete these comments, and ideally also use a CSS preprocessor.
+ */
+
+/**
+ * Component
+ *
+ * Usage: <body class="HolyGrail">
+ */
+
+.HolyGrail {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+/**
+ * Header, Leader, Footer
+ *
+ * The "header" and "footer" are the typical HTML5 tags.
+ *
+ * The "leader" is our naming convention for the middle area
+ * that goes between the header tag and the footer tag.
+ * We hope the HTML standard will add a tag for this area.
+ *
+ * Some coders call it "master container", or "body content",
+ * or similar names. You can rename "leader" if you prefer.
+ *
+ * Usage:
+ *
+ *     <header class="HolyGrail-header">...</header>
+ *     <div class="HolyGrail-leader">...</div>
+ *     <footer class="HolyGrail-footer">...</footer>
+ */
+
+.HolyGrail-header {
+  flex: none;
+}
+
+.HolyGrail-leader {
+  display: flex;
+  flex: 1 0 auto; /* 2 */
+  flex-direction: column;
+  padding: var(--space);
+}
+
+.HolyGrail-footer {
+  flex: none;
+}
+
+/**
+ * Main area
+ *
+ * The main area is where typical web page content goes;
+ * the main area renders in the middle of the screen, and grows to fit.
+ *
+ * The layout has three major areas:
+ *
+ *   * The first area. This is the left column on a big screen, or the top row on a small screen.
+ *   * The main area. This is the middle center area on any size scren, and it grows to fit.
+ *   * The last area. This is the right column on a big screen, or the bottom row on a small screen.
+ *
+ * Usage:
+ *
+ *     <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
+ *     <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
+ *     <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
+ *
+ * We recommend using the HTML tag `main` for the main area.
+ *
+ * We suggest using the HTML tag `aside` for the other two areas,
+ * unless you have a better tag, such as `nav` for a navigation area.
+ *
+ * If you're building a page that you want to be indexed by search engines,
+ * then we suggest you write the `main` area first because it may improve SEO.
+ *
+ * Usage:
+ *
+ *     <main class="HolyGrail-leader-main">Show in the middle</main>
+ *     <aside class="HolyGrail-leader-first">Show at top or left</aside>
+ *     <aside class="HolyGrail-leader-last">Show at bottom or right</aside>
+ *
+ * We use the naming convention of "first" and "last", rather than
+ * anything like "row", "column", "left", "right", "top", "bottom", etc.
+ * because we prefer semantic names suitable for various screen layouts.
+ */
+
+.HolyGrail-leader-first {
+  order: -1;
+}
+
+.HolyGrail-leader-main {
+  order: 0; /* this is the default */
+}
+
+.HolyGrail-leader-last {
+  order: 0; /* this is the default */
+}
+
+/**
+ * Media queries for responsive layout:
+ *
+ *   * A small screen layout uses three rows.
+ *   * A large screen layout uses three columns.
+ *
+ * We choose 768 pixels as the start of a large screen size.
+ * If you prefer different settings, or prefer more than two
+ * screen sizes, then you'll want to edit these media queries.
+ */
+
+/* Small screen */
+@media (max-width: 767px) {
+
+  .HolyGrail-leader {
+    flex-direction: column;
+  }
+
+  .HolyGrail-leader-first {
+      /* No flex */
+  }
+
+  .HolyGrail-leader-main {
+      /* No flex */
+  }
+
+  .HolyGrail-leader-last {
+      /* No flex */
+  }
+
+}
+
+/* Large screen */
+@media (min-width: 768px) {
+
+  .HolyGrail-leader {
+    flex-direction: row;
+  }
+
+  .HolyGrail-leader-first {
+     flex: 0 0 12em; /* Optional: change 12 to any column width */
+  }
+
+  .HolyGrail-leader-main {
+    flex: 1;
+  }
+
+  .HolyGrail-leader-last {
+    flex: 0 0 12em; /* Optional: change 12 to any column width */
+  }
+
+}
