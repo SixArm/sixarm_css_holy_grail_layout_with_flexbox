@@ -75,7 +75,17 @@ We suggest using the HTML tag `aside` for the other two areas,
 unless you have a better tag, such as `nav` for a navigation area.
 
 If you're building a page that you want to be indexed by search engines,
-then we suggest you write the `main` area first because it may improve SEO.
+then we suggest you rearrange the areas so the `main` area HTML code
+comes before the other two areas.
+
+HTML example that's better for SEO:
+
+    <div class="HolyGrail-leader">
+      <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
+      <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
+      <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
+    </div>
+
 
 ## Media queries for responsive layout ##
 
