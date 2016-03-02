@@ -68,17 +68,11 @@ Usage:
     <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
 
 We recommend using the HTML tag `main` for the main area.
-
 We suggest using the HTML tag `aside` for the other two areas,
 unless you have a better tag, such as `nav` for a navigation area.
 
 If you're building a page that you want to be indexed by search engines,
 then we suggest you write the `main` area first because it may improve SEO.
-
-We use the naming convention of "first" and "last", rather than
-anything like "row", "column", "left", "right", "top", "bottom", etc.
-because we prefer semantic names suitable for various screen layouts.
-
 
 ## Media queries for responsive layout ##
 
@@ -86,5 +80,6 @@ because we prefer semantic names suitable for various screen layouts.
  * A large screen layout uses three columns.
 
 We choose 768 pixels as the start of a large screen size.
+
 If you prefer different settings, or prefer more than two
 screen sizes, then you'll want to edit these media queries.
