@@ -42,7 +42,6 @@ The "header" and "footer" are the typical HTML5 tags.
 The "leader" is our naming convention for the middle area
 that goes between the header tag and the footer tag.
 We hope the HTML standard will add a tag for this area.
-
 Some coders call it "master container", or "body content",
 or similar names. You can rename "leader" if you prefer.
 
