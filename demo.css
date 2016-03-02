@@ -72,7 +72,7 @@
 }
 
 /**
- * Main area
+ * Three Areas
  *
  * The main area is where typical web page content goes;
  * the main area renders in the middle of the screen, and grows to fit.
@@ -112,7 +112,9 @@
 }
 
 /**
- * Media queries for responsive layout:
+ * Media Queries
+ *
+ * The layout uses media queries to enable responsive pages:
  *
  *   * A small screen layout uses three rows.
  *   * A large screen layout uses three columns.

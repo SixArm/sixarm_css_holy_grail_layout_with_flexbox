@@ -87,10 +87,12 @@ HTML example that's better for SEO:
     </div>
 
 
-## Media queries for responsive layout ##
+## Media queries ##
 
- * A small screen layout uses three rows.
- * A large screen layout uses three columns.
+The layout uses media queries to enable responsive pages:
+
+ * A small screen shows the three areas as rows.
+ * A large screen shows the three areas as columns.
 
 We choose 768 pixels as the start of a large screen size.
 
