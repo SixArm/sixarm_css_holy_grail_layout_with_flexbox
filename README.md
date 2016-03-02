@@ -54,9 +54,9 @@ HTML example:
     </body>
 
 
-## Main Area ##
+## Three Areas ##
 
-The layout has three major areas:
+The layout uses three areas:
 
  * The first area. This is the left column on a big screen, or the top row on a small screen.
  * The main area. This is the middle center area on any size scren, and it grows to fit.
