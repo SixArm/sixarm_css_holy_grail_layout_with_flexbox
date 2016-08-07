@@ -37,6 +37,12 @@ delete these comments, and ideally also use a CSS preprocessor.
 
 ## Header, Leader, Footer ##
 
+Our layout has these sections:
+
+  * header
+  * leader, which has first area, main area, last area
+  * footer 
+
 The "header" and "footer" are the typical HTML5 tags.
 
 The "leader" is our naming convention for the middle area
@@ -45,47 +51,65 @@ We hope the HTML standard will add a tag for this area.
 Some coders call it "master container", or "body content",
 or similar names. You can rename "leader" if you prefer.
 
-HTML example:
+The leader has these areas:
 
-    <body class="HolyGrail">
-      <header class="HolyGrail-header">...</header>
-      <div class="HolyGrail-leader">...</div>
-      <footer class="HolyGrail-footer">...</footer>
-    </body>
-
-
-## Three Areas ##
-
-The layout uses three areas:
-
- * The first area. This is the left column on a big screen, or the top row on a small screen.
+ * first area. This is the left column on a big screen, or the top row on a small screen.
  * The main area. This is the middle center area on any size scren, and it grows to fit.
  * The last area. This is the right column on a big screen, or the bottom row on a small screen.
 
 HTML example:
 
-    <div class="HolyGrail-leader">
-      <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
-      <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
-      <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
-    </div>
+    <body class="HolyGrail">
+      <div class="HolyGrail-header">
+        <header>...</header>
+      </div>
+      <div class="HolyGrail-leader">
+        <div class="HolyGrail-leader-first"><aside>Show first, at top or left</aside></div>
+        <div class="HolyGrail-leader-main"><main>Show in main area, in the middle</main></div>
+        <div class="HolyGrail-leader-last"><aside>Show last, at bottom or right</aside></div>
+      </div>
+      <div class="HolyGrail-footer">
+        <footer>...</footer>
+      </div>
+    </body>
 
 We recommend using the HTML tag `main` for the main area.
-We suggest using the HTML tag `aside` for the other two areas,
-unless you have a better tag, such as `nav` for a navigation area.
+
+We suggest using the HTML tag `aside` for the first area and laster area,
+unless you feel there is a better tag, such as `nav` for a navigation area.
+
+## Pro Tip for SEO
 
 If you're building a page that you want to be indexed by search engines,
-then we suggest you rearrange the areas so the `main` area HTML code
-comes before the other two areas.
+then we suggest you rearrange the leader areas to make the `main` area 
+comes before the `first` area and the `last` area.
 
-HTML example that's better for SEO:
+Example:
 
-    <div class="HolyGrail-leader">
-      <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
-      <aside class="HolyGrail-leader-first">Show first, at top or left</aside>
-      <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
-    </div>
+    <div class="HolyGrail-leader-main"><main>Show in main area, in the middle</main></div>
+    <div class="HolyGrail-leader-first"><aside>Show first, at top or left</aside></div>
+    <div class="HolyGrail-leader-last"><aside>Show last, at bottom or right</aside></div>
 
+## Pro Tip for optimization
+
+Do you have goals like these?
+
+  * Use a typical "nav" section at the top or left side.
+  * Use a typical "main" section, and load it high on the page because of SEO.
+  * Use a typical "aside" tag at the bottom or right side.
+  * Use each specific HTML tag when possible, rather than using unnessary div tags.
+
+Example:
+
+    <body class="HolyGrail">
+      <header class="HolyGrail-header">...</header>
+      <div class="HolyGrail-leader">
+        <main class="HolyGrail-leader-main">Show in main area, in the middle</main>
+        <nav class="HolyGrail-leader-first">Show first, at top or left</nav>
+        <aside class="HolyGrail-leader-last">Show last, at bottom or right</aside>
+      </div>
+      <footer class="HolyGrail-footer">...</footer>
+    </body>
 
 ## Media queries ##
 
